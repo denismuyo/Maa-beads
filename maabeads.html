@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savanna Beads - Empowering Maasai Women Artisans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bead-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .artisan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .impact-card:hover .impact-icon {
+            transform: scale(1.1);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center mr-2">
+                                <div class="h-4 w-4 rounded-full bg-blue-600"></div>
+                            </div>
+                            <span class="title-font text-xl font-bold text-gray-900">Savanna Beads</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#" class="border-red-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Shop</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Artisans</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Impact</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Learn</a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <div class="relative mx-4">
+                        <input type="text" placeholder="Search beadwork..." class="border border-gray-300 rounded-full py-1 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 w-64">
+                        <i class="fas fa-search absolute left-3 top-2 text-gray-400"></i>
+                    </div>
+                    <button class="ml-4 p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        <i class="fas fa-heart text-xl"></i>
+                    </button>
+                    <button class="ml-4 p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                    </button>
+                    <button class="ml-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">Become an Artisan</button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:w-2/3 lg:w-1/2">
+                <h1 class="title-font text-4xl md:text-5xl lg:text-6xl font-bold mb-4 fade-in">Empowering Women Through Beads and Technology</h1>
+                <p class="text-lg md:text-xl mb-8 fade-in">Discover authentic handmade Maasai beadwork crafted by women in Narok. Each purchase supports digital empowerment and economic independence.</p>
+                <div class="flex flex-wrap gap-4 fade-in">
+                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition duration-300 flex items-center">
+                        Shop Now <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-red-600 px-6 py-3 rounded-full text-lg font-medium transition duration-300 flex items-center">
+                        Meet the Makers <i class="fas fa-users ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-12 bg-white bead-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="title-font text-3xl font-bold text-center mb-12">Shop By Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition duration-300">
+                    <div class="h-16 w-16 mx-auto mb-3 bg-red-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-necklace text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Necklaces</h3>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition duration-300">
+                    <div class="h-16 w-16 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-ring text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Bracelets</h3>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition duration-300">
+                    <div class="h-16 w-16 mx-auto mb-3 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-ear-deaf text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Earrings</h3>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition duration-300">
+                    <div class="h-16 w-16 mx-auto mb-3 bg-yellow-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-home text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Home Decor</h3>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition duration-300">
+                    <div class="h-16 w-16 mx-auto mb-3 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Ceremony Beads</h3>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition duration-300">
+                    <div class="h-16 w-16 mx-auto mb-3 bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-pencil-ruler text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Custom Orders</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="title-font text-3xl font-bold">Featured Beadwork</h2>
+                <a href="#" class="text-red-600 hover:text-red-700 font-medium flex items-center">
+                    View all <i class="fas fa-chevron-right ml-1"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 product-card relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Maasai Beaded Necklace" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">New</div>
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-red-600 px-4 py-2 rounded-full font-medium">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Warrior's Pride Necklace</h3>
+                                <p class="text-sm text-gray-500 mb-2">Made by <a href="#" class="text-red-600 hover:underline">Naserian</a></p>
+                            </div>
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-lg">KSh 1,200</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                        <button class="w-full mt-3 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 product-card relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Maasai Beaded Bracelet" class="w-full h-64 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-red-600 px-4 py-2 rounded-full font-medium">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Fertility Bracelet Set</h3>
+                                <p class="text-sm text-gray-500 mb-2">Made by <a href="#" class="text-red-600 hover:underline">Makena</a></p>
+                            </div>
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-lg">KSh 800</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                        <button class="w-full mt-3 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 product-card relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1611591437918-8411a0f0a9e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Maasai Beaded Earrings" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Bestseller</div>
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-red-600 px-4 py-2 rounded-full font-medium">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Sunset Dangle Earrings</h3>
+                                <p class="text-sm text-gray-500 mb-2">Made by <a href="#" class="text-red-600 hover:underline">Jemimah</a></p>
+                            </div>
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-lg">KSh 600</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                        <button class="w-full mt-3 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 product-card relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Maasai Beaded Bowl" class="w-full h-64 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-red-600 px-4 py-2 rounded-full font-medium">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Heritage Beaded Bowl</h3>
+                                <p class="text-sm text-gray-500 mb-2">Made by <a href="#" class="text-red-600 hover:underline">Naomi</a></p>
+                            </div>
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-lg">KSh 2,500</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                        <button class="w-full mt-3 bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BeadStory Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-red-50 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="title-font text-3xl font-bold mb-4">The Story Behind Our Beads</h2>
+                    <p class="text-gray-700 mb-6">Each Maasai beadwork piece carries deep cultural significance. The colors and patterns tell stories of heritage, status, and life transitions.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-fire text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Red</h4>
+                                <p class="text-gray-600">Symbolizes bravery, strength, and unity. Worn by warriors and leaders.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-cloud text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Blue</h4>
+                                <p class="text-gray-600">Represents the sky and energy. Signifies sustenance and the divine.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-leaf text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Green</h4>
+                                <p class="text-gray-600">Symbolizes health, land, and prosperity. Worn during harvest celebrations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Maasai beadwork closeup" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Makers -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl font-bold mb-4">Meet the Artisans</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Each piece is handcrafted by talented Maasai women in Narok, Kenya. Your purchase directly supports their families and communities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Artisan 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md artisan-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Naserian" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <h3 class="font-bold text-xl">Naserian K.</h3>
+                            <span class="ml-auto bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Gold Artisan</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 italic">"Beadwork is my voice to the world. Through Savanna Beads, I can educate my children and build a home."</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Narok, Kenya</span>
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span>4.9 (87)</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <div class="flex justify-between text-sm">
+                                <div>
+                                    <p class="text-gray-500">Products</p>
+                                    <p class="font-bold">24</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500">Customers</p>
+                                    <p class="font-bold">156</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500">Income</p>
+                                    <p class="font-bold">3.2x</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-red-600 hover:text-red-700 font-medium">View Naserian's Work →</a>
+                    </div>
+                </div>
+                
+                <!-- Artisan 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md artisan-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Makena" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <h3 class="font-bold text-xl">Makena L.</h3>
+                            <span class="ml-auto bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Silver Artisan</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 italic">"This platform has given me confidence. I'm no longer just a wife and mother—I'm a businesswoman."</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Narok, Kenya</span>
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span>4.7 (42)</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <div class="flex justify-between text-sm">
+                                <div>
+                                    <p class="text-gray-500">Products</p>
+                                    <p class="font-bold">15</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500">Customers</p>
+                                    <p class="font-bold">89</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500">Income</p>
+                                    <p class="font-bold">2.5x</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-red-600 hover:text-red-700 font-medium">View Makena's Work →</a>
+                    </div>
+                </div>
+                
+                <!-- Artisan 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md artisan-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Jemimah" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <h3 class="font-bold text-xl">Jemimah N.</h3>
+                            <span class="ml-auto bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded">Bronze Artisan</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 italic">"At 19, I'm the first in my family to earn money independently. I'm saving for college through my beadwork."</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Narok, Kenya</span>
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span>4.8 (23)</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <div class="flex justify-between text-sm">
+                                <div>
+                                    <p class="text-gray-500">Products</p>
+                                    <p class="font-bold">8</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500">Customers</p>
+                                    <p class="font-bold">37</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500">Income</p>
+                                    <p class="font-bold">1.8x</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-red-600 hover:text-red-700 font-medium">View Jemimah's Work →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 transition duration-300">
+                    Meet All Our Artisans
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl font-bold mb-4">Our Collective Impact</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Every purchase creates ripples of change. Here's what we've achieved together since 2020.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-red-50 rounded-lg p-6 text-center impact-card">
+                    <div class="h-16 w-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center impact-icon transition duration-300">
+                        <i class="fas fa-users text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-red-600 mb-2">87</h3>
+                    <p class="text-gray-700">Women Artisans Empowered</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6 text-center impact-card">
+                    <div class="h-16 w-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center impact-icon transition duration-300">
+                        <i class="fas fa-globe-africa text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-blue-600 mb-2">14</h3>
+                    <p class="text-gray-700">Countries Reached</p>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg p-6 text-center impact-card">
+                    <div class="h-16 w-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center impact-icon transition duration-300">
+                        <i class="fas fa-money-bill-wave text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-green-600 mb-2">3.1x</h3>
+                    <p class="text-gray-700">Average Income Growth</p>
+                </div>
+                
+                <div class="bg-yellow-50 rounded-lg p-6 text-center impact-card">
+                    <div class="h-16 w-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center impact-icon transition duration-300">
+                        <i class="fas fa-graduation-cap text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-yellow-600 mb-2">42</h3>
+                    <p class="text-gray-700">Children in School</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-8 md:p-12">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h3 class="title-font text-2xl font-bold mb-4">Support Our Growth</h3>
+                        <p class="text-gray-700 mb-6">Your donation helps us train more women, provide beadwork toolkits, and expand our digital literacy programs in rural Kenya.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-toolbox text-red-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">KSh 5,000 sponsors a beadwork toolkit for one artisan</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-tablet-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">KSh 15,000 provides a smartphone for digital access</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-chalkboard-teacher text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">KSh 50,000 funds a month of training workshops</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-lg mb-4">Make a Difference Today</h4>
+                            <div class="space-y-3 mb-6">
+                                <button class="w-full py-2 px-4 border border-gray-300 rounded-lg text-left hover:bg-gray-50 transition duration-300">
+                                    <div class="flex items-center">
+                                        <div class="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center mr-3">
+                                            <i class="fas fa-toolbox text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">Sponsor a Toolkit</p>
+                                            <p class="text-sm text-gray-500">KSh 5,000</p>
+                                        </div>
+                                    </div>
+                                </button>
+                                <button class="w-full py-2 px-4 border border-gray-300 rounded-lg text-left hover:bg-gray-50 transition duration-300">
+                                    <div class="flex items-center">
+                                        <div class="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center mr-3">
+                                            <i class="fas fa-mobile-alt text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">Digital Access Fund</p>
+                                            <p class="text-sm text-gray-500">KSh 15,000</p>
+                                        </div>
+                                    </div>
+                                </button>
+                                <button class="w-full py-2 px-4 border border-gray-300 rounded-lg text-left hover:bg-gray-50 transition duration-300">
+                                    <div class="flex items-center">
+                                        <div class="h-8 w-8 rounded-full bg-green-600 flex items-center justify-center mr-3">
+                                            <i class="fas fa-users text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">Training Program</p>
+                                            <p class="text-sm text-gray-500">KSh 50,000</p>
+                                        </div>
+                                    </div>
+                                </button>
+                                <button class="w-full py-2 px-4 border border-gray-300 rounded-lg text-left hover:bg-gray-50 transition duration-300">
+                                    <div class="flex items-center">
+                                        <div class="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center mr-3">
+                                            <i class="fas fa-pencil-alt text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">Custom Amount</p>
+                                            <p class="text-sm text-gray-500">Enter any amount</p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <button class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium transition duration-300">
+                                Donate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl font-bold mb-4">What People Are Saying</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our customers, artisans, and partners about their Savanna Beads experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="h-12 w-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah M.</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The craftsmanship is incredible! My bracelet arrived with a handwritten note from the artisan. Knowing my purchase directly supports her family makes it even more special."</p>
+                    <p class="text-sm text-gray-500">Customer from London, UK</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James" class="h-12 w-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">James K.</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"As a retailer, I'm impressed by the quality and unique designs. My customers love the cultural stories behind each piece. The ordering process is seamless."</p>
+                    <p class="text-sm text-gray-500">Boutique Owner, Nairobi</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Naserian" class="h-12 w-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Naserian K.</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Before Savanna Beads, I struggled to sell my beadwork. Now I have customers worldwide! The training helped me price my work fairly and manage my small business."</p>
+                    <p class="text-sm text-gray-500">Artisan from Narok</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="title-font text-3xl font-bold mb-2">Join Our Bead Circle</h2>
+                    <p class="text-red-100">Subscribe for stories from our artisans, exclusive offers, and 10% off your first purchase.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="flex">
+                        <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-l-lg w-full focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-black hover:bg-gray-900 text-white px-6 py-3 rounded-r-lg font-medium transition duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-red-100 text-sm mt-2">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">All Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">New Arrivals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Bestsellers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Gift Cards</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Our Story</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Impact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Artisans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">Help</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shipping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="title-font text-lg font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-pinterest-p text-xl"></i>
+                        </a>
+                    </div>
+                    <h4 class="font-bold mb-2">Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="bg-gray-800 p-2 rounded">
+                            <i class="fab fa-cc-visa text-xl"></i>
+                        </div>
+                        <div class="bg-gray-800 p-2 rounded">
+                            <i class="fab fa-cc-mastercard text-xl"></i>
+                        </div>
+                        <div class="bg-gray-800 p-2 rounded">
+                            <i class="fab fa-cc-paypal text-xl"></i>
+                        </div>
+                        <div class="bg-gray-800 p-2 rounded">
+                            <i class="fas fa-mobile-alt text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="md:flex md:items-center md:justify-between">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <div class="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center mr-2">
+                            <div class="h-4 w-4 rounded-full bg-blue-600"></div>
+                        </div>
+                        <span class="title-font text-xl font-bold">Savanna Beads</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2023 Savanna Beads. All rights reserved. Empowering Maasai women through commerce and technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Artisan Dashboard Sample (Hidden by default) -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="dashboardModal">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl bg-white rounded-lg shadow-xl overflow-hidden max-h-screen" style="height: 90vh;">
+            <div class="flex h-full">
+                <!-- Sidebar -->
+                <div class="w-64 bg-gray-900 text-white p-4 flex flex-col">
+                    <div class="flex items-center mb-8">
+                        <div class="h-10 w-10 rounded-full bg-red-600 flex items-center justify-center mr-2">
+                            <div class="h-5 w-5 rounded-full bg-blue-600"></div>
+                        </div>
+                        <span class="title-font text-lg font-bold">Artisan Dashboard</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-8 p-2 bg-gray-800 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Artisan" class="h-10 w-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">Naserian K.</p>
+                            <p class="text-xs text-gray-400">Gold Artisan</p>
+                        </div>
+                    </div>
+                    
+                    <nav class="flex-1">
+                        <a href="#" class="flex items-center p-2 text-white bg-gray-700 rounded-lg mb-1">
+                            <i class="fas fa-tachometer-alt mr-3"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg mb-1">
+                            <i class="fas fa-box-open mr-3"></i>
+                            <span>Products</span>
+                            <span class="ml-auto bg-red-600 text-white text-xs px-2 py-1 rounded-full">24</span>
+                        </a>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg mb-1">
+                            <i class="fas fa-shopping-cart mr-3"></i>
+                            <span>Orders</span>
+                            <span class="ml-auto bg-blue-600 text-white text-xs px-2 py-1 rounded-full">15</span>
+                        </a>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg mb-1">
+                            <i class="fas fa-chart-line mr-3"></i>
+                            <span>Analytics</span>
+                        </a>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg mb-1">
+                            <i class="fas fa-wallet mr-3"></i>
+                            <span>Earnings</span>
+                        </a>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg mb-1">
+                            <i class="fas fa-graduation-cap mr-3"></i>
+                            <span>Learning Center</span>
+                        </a>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg mb-1">
+                            <i class="fas fa-cog mr-3"></i>
+                            <span>Settings</span>
+                        </a>
+                    </nav>
+                    
+                    <div class="mt-auto">
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded-lg">
+                            <i class="fas fa-sign-out-alt mr-3"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="flex-1 overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="title-font text-2xl font-bold">Artisan Dashboard</h2>
+                            <button class="text-gray-500 hover:text-gray-700" onclick="document.getElementById('dashboardModal').classList.add('hidden')">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                        <i class="fas fa-box-open text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-500">Active Products</p>
+                                        <p class="text-2xl font-bold">24</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                        <i class="fas fa-shopping-cart text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-500">Orders This Month</p>
+                                        <p class="text-2xl font-bold">15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <i class="fas fa-wallet text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-500">Earnings</p>
+                                        <p class="text-2xl font-bold">KSh 32,400</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="font-bold text-lg">Recent Orders</h3>
+                                <a href="#" class="text-red-600 hover:text-red-700 text-sm font-medium">View All</a>
+                            </div>
+                            
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order ID</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Items</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#SB-2874</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sarah M.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Warrior's Pride Necklace (2)</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">KSh 2,400</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Shipped</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#SB-2873</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">James K.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Fertility Bracelet Set</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">KSh 800</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Processing</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#SB-2870</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Amina W.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sunset Dangle Earrings</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">KSh 600</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Paid</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <h3 class="font-bold text-lg mb-4">Add New Product</h3>
+                                <form>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="product-name">Product Name</label>
+                                        <input type="text" id="product-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="product-price">Price (KSh)</label>
+                                        <input type="number" id="product-price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="product-category">Category</label>
+                                        <select id="product-category" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                            <option>Necklaces</option>
+                                            <option>Bracelets</option>
+                                            <option>Earrings</option>
+                                            <option>Home Decor</option>
+                                            <option>Ceremony Beads</option>
+                                            <option>Custom Orders</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2">Upload Images</label>
+                                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                            <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
+                                            <p class="text-sm text-gray-500">Drag & drop images here or click to browse</p>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg font-medium transition duration-300">
+                                        Save Product
+                                    </button>
+                                </form>
+                            </div>
+                            
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <h3 class="font-bold text-lg mb-4">Learning Center</h3>
+                                <div class="space-y-4">
+                                    <a href="#" class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition duration-300">
+                                        <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                            <i class="fas fa-camera text-blue-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium">How to Photograph Your Beadwork</h4>
+                                            <p class="text-sm text-gray-500">Learn techniques to showcase your products beautifully</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition duration-300">
+                                        <div class="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                            <i class="fas fa-tags text-green-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium">Pricing Your Work Fairly</h4>
+                                            <p class="text-sm text-gray-500">Calculate material costs and value your time appropriately</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-start p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition duration-300">
+                                        <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                            <i class="fas fa-box-open text-purple-600"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium">Packaging for Safe Delivery</h4>
+                                            <p class="text-sm text-gray-500">Best practices to ensure your products arrive perfectly</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="mt-4 inline-flex items-center text-red-600 hover:text-red-700 font-medium">
+                                    View All Resources <i class="fas fa-chevron-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample script to toggle dashboard modal
+        document.addEventListener('DOMContentLoaded', function() {
+            // This would be triggered by clicking "Become an Artisan" or "Artisan Login"
+            // For demo purposes, we'll leave it hidden by default
+            // To view, you can uncomment the next line:
+            // document.getElementById('dashboardModal').classList.remove('hidden');
+            
+            // Mobile menu toggle would go here
+            // Cart functionality would go here
+            // etc.
+        });
+    </script>
+</body>
+</html>
